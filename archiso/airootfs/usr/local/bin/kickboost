@@ -1,0 +1,59 @@
+#!/bin/bash
+# KickOS KickBoost FPS Optimizer
+# Usage: kickboost [balanced|performance|turbo]
+
+MODE=${1:-balanced}
+
+set_governor() {
+    for cpu in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do
+        echo "$1" > "$cpu" 2>/dev/null
+    done
+}
+
+set_gpu_performance() {
+    for card in /sys/class/drm/card*/device/power_dpm_force_performance_level; do
+        echo "$1" > "$card" 2>/dev/null
+    done
+    if command -v nvidia-settings &>/dev/null; then
+        nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=$2" &>/dev/null
+    fi
+}
+
+clear_cache() {
+    sync
+    echo 3 > /proc/sys/vm/drop_caches
+}
+
+case $MODE in
+    balanced)
+        set_governor "schedutil"
+        set_gpu_performance "auto" "0"
+        systemctl stop gamemode 2>/dev/null
+        echo "balanced" > /tmp/kickboost-mode
+        notify-send "KickBoost" "Mode: Balanced" --icon=kickos
+        ;;
+    performance)
+        set_governor "performance"
+        set_gpu_performance "high" "1"
+        systemctl start gamemode 2>/dev/null
+        clear_cache
+        echo "performance" > /tmp/kickboost-mode
+        notify-send "KickBoost" "Mode: Performance" --icon=kickos
+        ;;
+    turbo)
+        set_governor "performance"
+        set_gpu_performance "manual" "1"
+        systemctl start gamemode 2>/dev/null
+        clear_cache
+        sysctl -w kernel.sched_latency_ns=2000000 2>/dev/null
+        sysctl -w vm.swappiness=5 2>/dev/null
+        echo "turbo" > /tmp/kickboost-mode
+        notify-send "KickBoost" "Mode: TURBO" --icon=kickos
+        ;;
+    *)
+        echo "Usage: kickboost [balanced|performance|turbo]"
+        exit 1
+        ;;
+esac
+
+echo "KickBoost set to: $MODE"

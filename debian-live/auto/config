@@ -1,0 +1,8 @@
+#!/bin/sh
+lb config \
+  --distribution bookworm \
+  --archive-areas "main contrib non-free non-free-firmware" \
+  --debian-installer none \
+  --bootappend-live "boot=live components quiet splash" \
+  --iso-volume "KickOS-Debian" \
+  --image-name "kickos-debian"

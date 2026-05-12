@@ -1,0 +1,32 @@
+#!/bin/bash
+# KickOS hardware detection — runs on first boot
+
+GPU="unknown"
+if lspci | grep -qi nvidia; then
+    GPU="nvidia"
+    pacman -S --noconfirm nvidia-dkms nvidia-utils lib32-nvidia-utils
+elif lspci | grep -qi "amd\|radeon"; then
+    GPU="amd"
+    pacman -S --noconfirm mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon
+elif lspci | grep -qi intel; then
+    GPU="intel"
+    pacman -S --noconfirm mesa lib32-mesa vulkan-intel lib32-vulkan-intel intel-media-driver
+fi
+echo "GPU: $GPU detected and configured"
+
+CHASSIS=$(cat /sys/class/dmi/id/chassis_type 2>/dev/null)
+if echo "8 9 10 14" | grep -qw "$CHASSIS"; then
+    systemctl enable tlp thermald
+    echo "Laptop detected — TLP and thermald enabled"
+fi
+
+RAM_MB=$(free -m | awk '/Mem/{print $2}')
+if [ "$RAM_MB" -lt 4096 ]; then
+    systemctl enable zram-generator
+    echo "Low RAM detected — ZRAM enabled"
+fi
+
+SCREEN_W=$(xrandr 2>/dev/null | grep " connected" | grep -oP '\d+x\d+' | head -1 | cut -dx -f1)
+if [ -n "$SCREEN_W" ] && [ "$SCREEN_W" -le 1280 ]; then
+    echo "Small screen detected — enabling HiDPI scaling"
+fi

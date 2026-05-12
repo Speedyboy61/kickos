@@ -1,0 +1,24 @@
+Window.SetBackgroundTopColor (0.05, 0.05, 0.10);
+Window.SetBackgroundBottomColor (0.05, 0.05, 0.10);
+
+fun anim_callback ()
+{
+    my_logo = Image.Text ("K");
+    my_logo.SetPosition (Window.GetWidth () / 2 - my_logo.GetWidth () / 2,
+                         Window.GetHeight () / 2 - my_logo.GetHeight () / 2);
+    my_logo.SetOpacity (1.0);
+    my_logo.SetZ (10);
+
+    ring = Image.Elliptical (200, 200, 8);
+    ring.SetPosition (Window.GetWidth () / 2 - 100,
+                      Window.GetHeight () / 2 - 100);
+    ring.SetZ (5);
+    ring.SetOpacity (0.8);
+
+    progress = Image.Rectangle (Window.GetWidth () * 0.2, 4);
+    progress.SetPosition (Window.GetWidth () * 0.4, Window.GetHeight () * 0.85);
+    progress.SetZ (20);
+    progress.SetOpacity (0.9);
+}
+
+Plymouth.SetDisplayFunction (anim_callback);

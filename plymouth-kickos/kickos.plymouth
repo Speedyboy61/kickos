@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=KickOS
+Description=KickOS boot splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/kickos
+ScriptFile=/usr/share/plymouth/themes/kickos/kickos.script

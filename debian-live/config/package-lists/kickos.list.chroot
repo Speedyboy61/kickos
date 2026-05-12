@@ -1,0 +1,46 @@
+# Kernel
+linux-image-amd64
+linux-headers-amd64
+
+# Display
+xorg
+wayland-protocols
+pipewire
+wireplumber
+
+# Desktop environments
+kde-plasma-desktop
+sddm
+hyprland
+waybar
+i3
+i3status
+dmenu
+niri
+
+# Gaming — always installed
+wine
+wine32
+wine64
+playonlinux
+gamemode
+mangohud
+vulkan-tools
+mesa-vulkan-drivers
+libgl1-mesa-dri
+
+# Gaming optional
+lutris
+retroarch
+flatpak
+
+# System
+timeshift
+fwupd
+tlp
+thermald
+zram-tools
+curl
+wget
+git
+fastfetch
