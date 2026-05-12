@@ -247,22 +247,37 @@ The Arch edition is like a sports car — fast, customizable, always current, bu
 
 <section class="section">
 <div class="container">
-<h2 class="section-title">Try before you install</h2>
+<h2 class="section-title">Setup Instructions</h2>
 <div class="steps">
 <div class="step">
 <div class="step-num">1</div>
-<h3>Flash to USB</h3>
-<p>Download the ISO and flash to a USB using Balena Etcher or <code style="color:var(--purple)">dd</code>.</p>
+<h3>Build the ISO</h3>
+<p>Clone the repo and build. Requires Arch Linux.</p>
+<pre style="background:#1a1a3a;padding:12px;border-radius:8px;font-size:0.8rem;text-align:left;margin-top:8px;overflow-x:auto;color:#a89ff7"><code>git clone https://github.com/Speedyboy61/kickos.git
+cd kickos
+sudo pacman -S archiso
+./build.sh arch</code></pre>
 </div>
 <div class="step">
 <div class="step-num">2</div>
-<h3>Boot live environment</h3>
-<p>Boot from USB — KickOS runs fully from the USB, no installation needed.</p>
+<h3>Flash to USB</h3>
+<p>Use Balena Etcher or <code style="color:var(--purple)">dd</code> to write the ISO to a USB drive (8GB+).</p>
+<pre style="background:#1a1a3a;padding:12px;border-radius:8px;font-size:0.8rem;text-align:left;margin-top:8px;overflow-x:auto;color:#a89ff7"><code># Find your USB device
+lsblk
+# Flash the ISO (replace sdX with your USB)
+sudo dd if=kickos-arch-*.iso of=/dev/sdX bs=4M status=progress</code></pre>
 </div>
 <div class="step">
 <div class="step-num">3</div>
-<h3>Install when ready</h3>
-<p>Click "Install KickOS" on the desktop when you're ready to make it permanent.</p>
+<h3>Boot & Install</h3>
+<p>Reboot and boot from the USB. KickOS runs live with no install needed. When ready, click <strong>"Install KickOS"</strong> on the desktop. The Calamares installer will guide you through:</p>
+<ul style="list-style:none;margin-top:8px;text-align:left;font-size:0.85rem;color:var(--light-purple)">
+<li>✓ Partition your disk</li>
+<li>✓ Pick your desktop environment (KDE, Hyprland, i3, Niri, or Cutefish)</li>
+<li>✓ Select gaming packages (Steam, Lutris, Heroic, etc.)</li>
+<li>✓ Configure bootloader</li>
+<li>✓ Auto GPU driver detection</li>
+</ul>
 </div>
 </div>
 </div>
