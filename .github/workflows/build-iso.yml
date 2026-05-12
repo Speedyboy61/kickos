@@ -1,0 +1,26 @@
+name: Build KickOS ISO
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install archiso
+        run: |
+          pacman -Sy --noconfirm archiso
+      - name: Build Arch ISO
+        run: |
+          mkdir -p out
+          mkarchiso -v -w /tmp/work -o out archiso/
+      - name: Upload ISO
+        uses: actions/upload-artifact@v4
+        with:
+          name: kickos-arch-iso
+          path: out/*.iso

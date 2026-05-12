@@ -16,13 +16,17 @@ fastfetch
 
 # Boot
 grub
+syslinux
 efibootmgr
 refind
 os-prober
 plymouth
 
 # Display
-xorg
+xorg-server
+xorg-xrandr
+xorg-xrdb
+xorg-xsetroot
 wayland
 pipewire
 pipewire-pulse
@@ -40,13 +44,11 @@ i3-wm
 i3status
 dmenu
 niri
-cutefish
 
 # Gaming — always installed
 wine
 wine-mono
 wine-gecko
-proton-ge-custom
 steam
 gamemode
 lib32-gamemode
@@ -60,21 +62,15 @@ lib32-mesa
 
 # Gaming — optional (handled by installer)
 lutris
-heroic-games-launcher-bin
-bottles
-corectrl
 retroarch
 prismlauncher
 
 # Gaming support
-xpadneo-dkms
 steam-devices
-protonup-qt
 
 # System tools
 timeshift
 flatpak
-pamac-aur
 reflector
 zram-generator
 thermald

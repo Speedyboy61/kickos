@@ -1,16 +1,17 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 iso_name="kickos-arch"
 iso_label="KICKOS_ARCH"
 iso_publisher="KickOS Project <https://kickos.dev>"
 iso_application="KickOS Arch Linux Live/Rescue DVD"
-iso_version="$(date +%Y.%m.%d)"
+iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
-arch="x86_64"
-bootmodes=('bios.syslinux.mbr' 'bios.syslinux.eltorito'
-           'uefi-ia32.grub.esp' 'uefi-x64.grub.esp'
-           'uefi-ia32.grub.eltorito' 'uefi-x64.grub.eltorito')
+buildmodes=('iso')
+bootmodes=('bios.syslinux'
+           'uefi.systemd-boot')
+pacman_conf="pacman.conf"
 airootfs_image_type="squashfs"
-airootfs_image_tool_options=('-comp' 'xz' '-Xbcj' 'x86')
+airootfs_image_tool_options=('-comp' 'xz' '-Xbcj' 'x86' '-b' '1M' '-Xdict-size' '1M')
 file_permissions=(
   ["/etc/shadow"]="0:0:400"
   ["/usr/local/bin/kickboost"]="0:0:755"
