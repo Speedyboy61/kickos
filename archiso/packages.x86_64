@@ -18,6 +18,7 @@ syslinux
 efibootmgr
 os-prober
 plymouth
+mkinitcpio-archiso
 
 # Display
 xorg-server
@@ -29,7 +30,6 @@ wireplumber
 
 # Desktop - KDE (for live session)
 plasma-desktop
-plasma-wayland-session
 sddm
 kate
 dolphin
