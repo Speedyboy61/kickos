@@ -1,6 +1,7 @@
 # Base system
 base
 base-devel
+zsh
 linux
 linux-headers
 linux-firmware
@@ -53,3 +54,6 @@ timeshift
 mesa
 vulkan-tools
 gamemode
+
+# Default apps
+brave-bin
