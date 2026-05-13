@@ -1,0 +1,8 @@
+root:x:0:root
+wheel:x:10:kickos
+video:x:25:kickos
+audio:x:29:kickos
+storage:x:31:kickos
+power:x:98:kickos
+users:x:100:kickos
+kickos:x:1000:kickos

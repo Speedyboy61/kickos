@@ -1,8 +1,8 @@
 # Base system
 base
 base-devel
-linux-zen
-linux-zen-headers
+linux
+linux-headers
 linux-firmware
 networkmanager
 sudo
@@ -27,12 +27,16 @@ pipewire
 pipewire-pulse
 wireplumber
 
-# Desktop - KDE (lightweight, for live session)
+# Desktop - KDE (for live session)
 plasma-desktop
+plasma-wayland-session
 sddm
 kate
 dolphin
 konsole
+kdeplasma-addons
+discover
+packagekit-qt6
 
 # Installer
 cachyos-calamares
