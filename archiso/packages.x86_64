@@ -4,7 +4,14 @@ base-devel
 zsh
 linux
 linux-headers
-linux-firmware
+linux-firmware-whence
+linux-firmware-amdgpu
+linux-firmware-atheros
+linux-firmware-broadcom
+linux-firmware-intel
+linux-firmware-qcom
+linux-firmware-radeon
+linux-firmware-realtek
 networkmanager
 sudo
 nano
