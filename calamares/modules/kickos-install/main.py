@@ -28,7 +28,6 @@ def run():
         "hyprland": ["hyprland", "waybar", "wofi", "dunst", "hyprpaper"],
         "i3": ["i3-wm", "i3status", "dmenu", "st"],
         "niri": ["niri"],
-        "cutefish": ["cutefish"],
     }
 
     if de in de_packages:

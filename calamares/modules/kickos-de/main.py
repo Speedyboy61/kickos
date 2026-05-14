@@ -40,12 +40,7 @@ DESKTOPS = [
         "desc": "Experimental scrollable Wayland WM. Unique column layout.",
         "tags": ["Experimental"],
     },
-    {
-        "id": "cutefish",
-        "name": "Cutefish",
-        "desc": "macOS-inspired desktop. Clean, minimal, easy to use.",
-        "tags": ["macOS-style"],
-    },
+
 ]
 
 
