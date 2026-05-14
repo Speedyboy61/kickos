@@ -15,10 +15,14 @@ htop
 fastfetch
 
 grub
+syslinux
 efibootmgr
 os-prober
 plymouth
 mkinitcpio-archiso
+memtest86+
+memtest86+-efi
+edk2-shell
 
 xorg-server
 xorg-xrandr
@@ -89,6 +93,7 @@ protonup-qt
 timeshift
 flatpak
 reflector
+calamares
 zram-generator
 thermald
 tlp
