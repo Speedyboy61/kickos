@@ -1,0 +1,13 @@
+NAME="KickOS"
+VERSION="2026.05.13"
+ID=kickos
+ID_LIKE=arch
+PRETTY_NAME="KickOS Arch Edition"
+VERSION_ID="2026.05.13"
+BUILD_ID=rolling
+ANSI_COLOR="38;2;108;92;231"
+HOME_URL="https://kickos.dev"
+DOCUMENTATION_URL="https://kickos.dev"
+SUPPORT_URL="https://github.com/Speedyboy61/kickos"
+BUG_REPORT_URL="https://github.com/Speedyboy61/kickos/issues"
+LOGO=kickos

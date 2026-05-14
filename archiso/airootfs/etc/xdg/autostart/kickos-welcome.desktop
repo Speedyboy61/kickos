@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=KickOS Welcome
+Comment=First-boot setup wizard for KickOS
+Exec=/usr/local/bin/kickos-welcome
+Terminal=false
+Categories=System;
+X-KDE-autostart-after=plasma-core
+OnlyShowIn=KDE;

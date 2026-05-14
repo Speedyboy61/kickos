@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=KickOS Wallpaper
+Exec=/usr/local/bin/kickos-set-wallpaper
+Terminal=false
+NoDisplay=true
+X-KDE-autostart-after=plasma-core
+OnlyShowIn=KDE;

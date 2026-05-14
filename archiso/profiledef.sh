@@ -3,7 +3,7 @@
 iso_name="kickos-arch"
 iso_label="KICKOS_ARCH"
 iso_publisher="KickOS Project <https://kickos.dev>"
-iso_application="KickOS Arch Linux Live/Rescue DVD"
+iso_application="KickOS Live/Rescue DVD"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
@@ -18,4 +18,7 @@ file_permissions=(
   ["/usr/local/bin/kickboost"]="0:0:755"
   ["/usr/local/bin/kick-hardware-detect"]="0:0:755"
   ["/usr/local/bin/kicknotify"]="0:0:755"
+  ["/usr/local/bin/kickos-welcome"]="0:0:755"
+  ["/usr/local/bin/kickupdate"]="0:0:755"
+  ["/usr/local/bin/kickos-set-wallpaper"]="0:0:755"
 )

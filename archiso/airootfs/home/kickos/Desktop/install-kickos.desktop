@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Link
+Name=Install KickOS
+Comment=Install KickOS to your computer
+Icon=kickos
+URL=/usr/share/applications/calamares.desktop

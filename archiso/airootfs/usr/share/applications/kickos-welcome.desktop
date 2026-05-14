@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=KickOS Welcome
+Comment=First-boot setup wizard
+Exec=/usr/local/bin/kickos-welcome
+Icon=kickos
+Terminal=false
+Categories=System;Setup;

@@ -1,0 +1,5 @@
+#!/bin/bash
+WALLPAPER="/usr/share/kickos/wallpapers/kickos-default.jpg"
+if [ -f "$WALLPAPER" ] && command -v plasma-apply-wallpaperimage &>/dev/null; then
+    plasma-apply-wallpaperimage "$WALLPAPER" 2>/dev/null || true
+fi

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=KickUpdate
+Comment=KickOS Update Manager
+Exec=/usr/local/bin/kickupdate
+Icon=system-software-update
+Terminal=false
+Categories=System;
