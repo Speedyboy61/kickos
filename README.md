@@ -45,7 +45,7 @@
 | Kernel | linux-zen | Liquorix | linux-zen |
 | Release model | Rolling | Stable | Rolling |
 | AUR | Yes | No (Flatpak) | Yes |
-| Desktop environments | KDE, Budgie, Cinnamon, COSMIC, Hyprland, i3, Niri, Cutefish | KDE, Budgie, Cinnamon, COSMIC, Hyprland, i3, Niri, Cutefish | KDE, Budgie, Cinnamon, COSMIC, Hyprland, i3, Niri, Cutefish |
+| Desktop environments | KDE, Budgie, Cinnamon, Hyprland, i3, Niri, Cutefish (COSMIC from AUR) | KDE, Budgie, Cinnamon, Hyprland, i3, Niri, Cutefish (COSMIC from AUR) | KDE, Budgie, Cinnamon, Hyprland, i3, Niri, Cutefish (COSMIC from AUR) |
 | Best for | Power users | Stability seekers | Handheld gaming PCs |
 | Badge | Recommended for gamers | Best for stability | For handheld devices |
 

@@ -24,7 +24,7 @@ def run():
         "kde": ["plasma-desktop", "kdeplasma-addons", "sddm", "dolphin", "konsole", "kate", "discover", "packagekit-qt6"],
         "budgie": ["budgie-desktop", "budgie-control-center", "gnome-terminal"],
         "cinnamon": ["cinnamon", "gnome-terminal"],
-        "cosmic": ["cosmic", "cosmic-ext"],
+        # "cosmic": ["cosmic", "cosmic-ext"], # from AUR
         "hyprland": ["hyprland", "waybar", "wofi", "dunst", "hyprpaper"],
         "i3": ["i3-wm", "i3status", "dmenu", "st"],
         "niri": ["niri"],

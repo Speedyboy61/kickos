@@ -33,7 +33,6 @@ pipewire-pulse
 wireplumber
 
 plasma-desktop
-plasma-wayland-session
 kdeplasma-addons
 kate
 dolphin
@@ -48,9 +47,7 @@ budgie-control-center
 cinnamon
 gnome-terminal
 
-cosmic
-cosmic-ext
-cosmic-ext-applet
+# COSMIC (from AUR: cosmic, cosmic-ext, cosmic-ext-applet)
 
 hyprland
 waybar
@@ -61,7 +58,6 @@ hyprpaper
 i3-wm
 i3status
 dmenu
-st
 
 niri
 
@@ -70,7 +66,7 @@ cutefish
 wine
 wine-mono
 wine-gecko
-proton-ge-custom
+# proton-ge-custom (from AUR, install post-install)
 steam
 gamemode
 lib32-gamemode

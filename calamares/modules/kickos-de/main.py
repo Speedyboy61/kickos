@@ -23,12 +23,6 @@ DESKTOPS = [
         "tags": ["Beginner friendly", "GTK"],
     },
     {
-        "id": "cosmic",
-        "name": "COSMIC",
-        "desc": "Rust-based desktop environment. Modern, fast, and highly customizable.",
-        "tags": ["Modern", "Rust"],
-    },
-    {
         "id": "hyprland",
         "name": "Hyprland",
         "desc": "Wayland compositor with smooth animations. Highly customizable.",
