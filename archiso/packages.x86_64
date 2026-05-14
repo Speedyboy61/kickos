@@ -1,66 +1,96 @@
-# Base system
 base
 base-devel
 zsh
-linux
-linux-headers
-linux-firmware-whence
-linux-firmware-amdgpu
-linux-firmware-atheros
-linux-firmware-broadcom
-linux-firmware-intel
-linux-firmware-qcom
-linux-firmware-radeon
-linux-firmware-realtek
+linux-zen
+linux-zen-headers
+linux-firmware
 networkmanager
 sudo
 nano
+vim
 git
 curl
 wget
+htop
 fastfetch
 
-# Boot
 grub
-syslinux
 efibootmgr
 os-prober
 plymouth
 mkinitcpio-archiso
 
-# Display
 xorg-server
 xorg-xrandr
+xorg-xinit
 wayland
 pipewire
 pipewire-pulse
 wireplumber
 
-# Desktop - KDE (for live session)
 plasma-desktop
-sddm
+plasma-wayland-session
+kdeplasma-addons
 kate
 dolphin
 konsole
-kdeplasma-addons
 discover
 packagekit-qt6
+sddm
 
-# Installer
-cachyos-calamares
+budgie-desktop
+budgie-control-center
 
-# Network
-networkmanager
-dhcpcd
+cinnamon
+gnome-terminal
 
-# System tools
-reflector
-timeshift
+cosmic
+cosmic-ext
+cosmic-ext-applet
 
-# KickOS custom
-mesa
-vulkan-tools
+hyprland
+waybar
+wofi
+dunst
+hyprpaper
+
+i3-wm
+i3status
+dmenu
+st
+
+niri
+
+cutefish
+
+wine
+wine-mono
+wine-gecko
+proton-ge-custom
+steam
 gamemode
-
-# Default apps
+lib32-gamemode
+mangohud
+lib32-mangohud
+vulkan-icd-loader
+lib32-vulkan-icd-loader
+vulkan-tools
+mesa
+lib32-mesa
+lutris
+heroic-games-launcher-bin
+bottles
+corectrl
+retroarch
+prismlauncher
+xpadneo-dkms
+steam-devices
+protonup-qt
+timeshift
+flatpak
+reflector
+zram-generator
+thermald
+tlp
+fwupd
 brave-bin

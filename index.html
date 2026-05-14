@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KickOS — Linux built for gamers</title>
-<meta name="description" content="KickOS is a gaming-focused Linux distribution. Arch and Debian editions with Wine, Proton-GE, and KickBoost FPS preinstalled. Download free.">
+<meta name="description" content="KickOS is a gaming-focused Linux distribution. Arch, Debian, and Handheld editions with Wine, Proton-GE, and KickBoost FPS preinstalled. Download free.">
 <meta name="keywords" content="KickOS, Linux, gaming, Arch Linux, Debian, gaming OS, Steam, Proton, Wine, game distribution">
 <meta property="og:title" content="KickOS — Linux built for gamers">
-<meta property="og:description" content="A gaming-focused Linux distribution in Arch and Debian editions. Zero setup gaming.">
+<meta property="og:description" content="A gaming-focused Linux distribution. Zero setup gaming.">
 <meta property="og:image" content="assets/kickos-logo.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -21,20 +21,17 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--font-sans);background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-/* particles */
 #particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
 .p{position:absolute;width:4px;height:4px;background:var(--purple);border-radius:50%;opacity:0;animation:float linear infinite}
 @keyframes float{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:0.6}90%{opacity:0.6}100%{transform:translateY(-10vh) scale(1);opacity:0}}
-/* header */
 header{position:sticky;top:0;z-index:100;background:rgba(13,13,26,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(108,92,231,0.2)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
 .logo{display:flex;align-items:center;gap:10px;font-size:1.4rem;font-weight:800;text-decoration:none;color:var(--white)}
 .logo svg{width:36px;height:36px}
 nav a{color:var(--light-purple);text-decoration:none;margin-left:24px;font-size:0.9rem;transition:color .2s}
 nav a:hover{color:var(--purple)}
-/* hero */
 .hero{position:relative;z-index:1;text-align:center;padding:100px 0 80px;min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
-.hero-logo svg{width:120px;height:120px}
+.hero svg{width:120px;height:120px}
 .hero h1{font-size:3.5rem;font-weight:900;margin:20px 0 12px;background:linear-gradient(135deg,var(--purple),var(--light-purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero p{font-size:1.3rem;color:var(--light-purple);margin-bottom:32px}
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
@@ -43,30 +40,32 @@ nav a:hover{color:var(--purple)}
 .btn-primary:hover{background:#7c6cf7;transform:translateY(-2px);box-shadow:0 8px 24px rgba(108,92,231,0.4)}
 .btn-secondary{background:transparent;color:var(--light-purple);border:1px solid var(--purple)}
 .btn-secondary:hover{background:var(--dark-purple);transform:translateY(-2px)}
-/* sections */
 .section{z-index:1;position:relative;padding:80px 0}
 .section-title{font-size:2rem;font-weight:800;text-align:center;margin-bottom:48px;background:linear-gradient(135deg,var(--purple),var(--light-purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-/* features */
 .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
 .feature-card{background:var(--dark-purple);border:1px solid rgba(108,92,231,0.2);border-radius:12px;padding:32px;transition:all .3s}
 .feature-card:hover{border-color:var(--purple);transform:translateY(-4px);box-shadow:0 12px 32px rgba(108,92,231,0.15)}
 .feature-icon{font-size:2rem;margin-bottom:16px}
 .feature-card h3{font-size:1.2rem;margin-bottom:8px}
 .feature-card p{color:var(--light-purple);font-size:0.9rem}
-/* editions */
 .editions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
 .edition-card{background:var(--dark-purple);border:1px solid rgba(108,92,231,0.2);border-radius:12px;padding:32px;position:relative;transition:all .3s}
 .edition-card:hover{border-color:var(--purple);transform:translateY(-4px)}
 .edition-card.featured{border-color:var(--purple);border-width:2px}
 .badge{display:inline-block;background:var(--purple);color:var(--white);font-size:0.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:12px}
 .badge-stable{background:#2d6a4f}
+.badge-handheld{background:#e67e22}
 .edition-card h3{font-size:1.4rem;margin-bottom:8px}
 .edition-card ul{list-style:none;margin:16px 0}
 .edition-card li{position:relative;padding-left:20px;margin-bottom:6px;color:var(--light-purple);font-size:0.9rem}
 .edition-card li::before{content:"✓";position:absolute;left:0;color:var(--purple)}
 .edition-tagline{color:var(--light-purple);font-size:0.85rem;margin-top:12px;font-style:italic}
 .edition-compare-note{text-align:center;max-width:800px;margin:48px auto 0;padding:24px;background:var(--dark-purple);border-radius:12px;border:1px solid rgba(108,92,231,0.2);color:var(--light-purple);font-size:1rem;line-height:1.7}
-/* download */
+.de-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:24px}
+.de-card{background:var(--dark-purple);border:1px solid rgba(108,92,231,0.2);border-radius:8px;padding:20px;text-align:center;transition:all .2s}
+.de-card:hover{border-color:var(--purple);transform:translateY(-2px)}
+.de-card h4{font-size:1rem;margin-bottom:4px}
+.de-card p{color:var(--light-purple);font-size:0.8rem}
 .download-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
 .download-card{background:var(--dark-purple);border:1px solid rgba(108,92,231,0.2);border-radius:12px;padding:32px;text-align:center;transition:all .3s}
 .download-card:hover{border-color:var(--purple)}
@@ -75,20 +74,21 @@ nav a:hover{color:var(--purple)}
 .download-card .kernel{font-size:0.8rem;color:var(--light-purple);margin-bottom:16px}
 .download-card .desc{font-size:0.85rem;color:var(--light-purple);margin:12px 0 20px}
 .verify-link{display:block;color:var(--light-purple);font-size:0.8rem;margin-top:8px}
-/* live boot steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
 .step{text-align:center;padding:24px}
 .step-num{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--purple);font-size:1.3rem;font-weight:800;margin-bottom:16px}
 .step h3{margin-bottom:8px}
 .step p{color:var(--light-purple);font-size:0.9rem}
-/* footer */
+.step pre{background:#1a1a3a;padding:12px;border-radius:8px;font-size:0.8rem;text-align:left;margin-top:8px;overflow-x:auto;color:#a89ff7}
+.step ul{list-style:none;margin-top:8px;text-align:left;font-size:0.85rem;color:var(--light-purple)}
+.step ul li{padding-left:20px;position:relative;margin-bottom:4px}
+.step ul li::before{content:"✓";position:absolute;left:0;color:var(--purple)}
 footer{position:relative;z-index:1;background:var(--dark-purple);border-top:1px solid rgba(108,92,231,0.2);padding:48px 0;text-align:center}
 footer .logo{justify-content:center;margin-bottom:16px}
 .footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:16px;flex-wrap:wrap}
 .footer-links a{color:var(--light-purple);text-decoration:none;font-size:0.9rem}
 .footer-links a:hover{color:var(--purple)}
 footer p{color:var(--light-purple);font-size:0.85rem}
-/* responsive */
 @media(max-width:768px){
 .hero h1{font-size:2.2rem}
 .hero p{font-size:1rem}
@@ -142,18 +142,31 @@ KickOS
 </div>
 <div class="feature-card">
 <div class="feature-icon">🖥️</div>
-<h3>Your DE, your choice</h3>
-<p>Pick KDE, Hyprland, i3, Niri, or Cutefish at install time.</p>
+<h3>8 desktop environments</h3>
+<p>KDE Plasma, Budgie, Cinnamon, COSMIC, Hyprland, i3, Niri, or Cutefish — pick at install.</p>
 </div>
 <div class="feature-card">
 <div class="feature-icon">⚡</div>
 <h3>Hardware ready</h3>
-<p>Auto-detects GPU, installs drivers, and configures controllers.</p>
+<p>Auto-detects GPU (Nvidia/AMD/Intel), installs drivers, and configures controllers.</p>
 </div>
 <div class="feature-card">
 <div class="feature-icon">🔄</div>
 <h3>Always up to date</h3>
 <p>KickNotify and KickUpdate keep your system fresh automatically.</p>
+</div>
+</div>
+<div style="text-align:center;margin-top:32px">
+<h3 style="color:var(--light-purple);margin-bottom:16px">Choose your desktop environment</h3>
+<div class="de-grid">
+<div class="de-card"><h4>KDE Plasma</h4><p>Full-featured, great for gaming</p></div>
+<div class="de-card"><h4>Budgie</h4><p>Modern GTK desktop</p></div>
+<div class="de-card"><h4>Cinnamon</h4><p>Classic layout, familiar</p></div>
+<div class="de-card"><h4>COSMIC</h4><p>Rust-based, modern</p></div>
+<div class="de-card"><h4>Hyprland</h4><p>Wayland, smooth animations</p></div>
+<div class="de-card"><h4>i3</h4><p>Minimal tiling WM</p></div>
+<div class="de-card"><h4>Niri</h4><p>Scrollable Wayland WM</p></div>
+<div class="de-card"><h4>Cutefish</h4><p>macOS-inspired</p></div>
 </div>
 </div>
 </div>
@@ -188,7 +201,7 @@ KickOS
 <p class="edition-tagline">Best for: casual gamers, older hardware, set-it-and-forget-it</p>
 </div>
 <div class="edition-card">
-<span class="badge">For handheld devices</span>
+<span class="badge badge-handheld">For handheld devices</span>
 <h3>KickOS Handheld Edition</h3>
 <p style="color:var(--light-purple);font-size:0.9rem">Based on Arch Linux</p>
 <ul>
@@ -214,12 +227,12 @@ The Arch edition is like a sports car — fast, customizable, always current, bu
 <div class="download-card">
 <span class="badge">Recommended for gamers</span>
 <h3>Arch Edition</h3>
-<p class="iso-name">kickos-arch-v1.0.iso</p>
+<p class="iso-name">kickos-arch-2026.05.13-x86_64.iso</p>
 <p class="size">~2.1 GB</p>
 <p class="kernel">linux-zen kernel</p>
 <p class="desc">Rolling release for gamers who want the latest.</p>
 <a href="https://github.com/Speedyboy61/kickos/releases" class="btn btn-primary">Download ISO</a>
-<a href="https://github.com/Speedyboy61/kickos/releases" class="verify-link">Verify checksum</a>
+<a href="https://github.com/Speedyboy61/kickos/releases" class="verify-link">View checksums</a>
 </div>
 <div class="download-card">
 <span class="badge badge-stable">Best for stability</span>
@@ -229,17 +242,18 @@ The Arch edition is like a sports car — fast, customizable, always current, bu
 <p class="kernel">Liquorix kernel</p>
 <p class="desc">Rock-solid stable for casual gamers.</p>
 <a href="https://github.com/Speedyboy61/kickos/releases" class="btn btn-primary">Download ISO</a>
-<a href="https://github.com/Speedyboy61/kickos/releases" class="verify-link">Verify checksum</a>
+<a href="https://github.com/Speedyboy61/kickos/releases" class="verify-link">View checksums</a>
 </div>
 <div class="download-card">
-<span class="badge">For handheld devices</span>
+<span class="badge badge-handheld">For handheld devices</span>
 <h3>Handheld Edition</h3>
 <p class="iso-name">kickos-handheld-v1.0.iso</p>
 <p class="size">~2.4 GB</p>
 <p class="kernel">linux-zen kernel</p>
 <p class="desc">Optimized for handheld gaming PCs.</p>
 <a href="https://github.com/Speedyboy61/kickos/releases" class="btn btn-primary">Download ISO</a>
-<a href="https://github.com/Speedyboy61/kickos/releases" class="verify-link">Verify checksum</a>
+<a href="https://github.com/Speedyboy61/kickos/releases" class="verify-link">View checksums</a>
+</div>
 </div>
 <p style="text-align:center;color:var(--light-purple);font-size:0.9rem;margin-top:24px">Pre-built ISOs are available on <a href="https://github.com/Speedyboy61/kickos/releases" style="color:var(--purple)">GitHub Releases</a>.</p>
 </div>
@@ -253,7 +267,7 @@ The Arch edition is like a sports car — fast, customizable, always current, bu
 <div class="step-num">1</div>
 <h3>Build the ISO</h3>
 <p>Clone the repo and build. Requires Arch Linux.</p>
-<pre style="background:#1a1a3a;padding:12px;border-radius:8px;font-size:0.8rem;text-align:left;margin-top:8px;overflow-x:auto;color:#a89ff7"><code>git clone https://github.com/Speedyboy61/kickos.git
+<pre><code>git clone https://github.com/Speedyboy61/kickos.git
 cd kickos
 sudo pacman -S archiso
 ./build.sh arch</code></pre>
@@ -262,20 +276,20 @@ sudo pacman -S archiso
 <div class="step-num">2</div>
 <h3>Flash to USB</h3>
 <p>Use Balena Etcher or <code style="color:var(--purple)">dd</code> to write the ISO to a USB drive (8GB+).</p>
-<pre style="background:#1a1a3a;padding:12px;border-radius:8px;font-size:0.8rem;text-align:left;margin-top:8px;overflow-x:auto;color:#a89ff7"><code># Find your USB device
+<pre><code># Find your USB device
 lsblk
-# Flash the ISO (replace sdX with your USB)
+# Flash the ISO (replace sdX)
 sudo dd if=kickos-arch-*.iso of=/dev/sdX bs=4M status=progress</code></pre>
 </div>
 <div class="step">
 <div class="step-num">3</div>
 <h3>Boot & Install</h3>
 <p>Reboot and boot from the USB. KickOS runs live with no install needed. When ready, click <strong>"Install KickOS"</strong> on the desktop. The Calamares installer will guide you through:</p>
-<ul style="list-style:none;margin-top:8px;text-align:left;font-size:0.85rem;color:var(--light-purple)">
+<ul>
 <li>✓ Partition your disk</li>
-<li>✓ Pick your desktop environment (KDE, Hyprland, i3, Niri, or Cutefish)</li>
+<li>✓ Pick your desktop environment (KDE, Budgie, Cinnamon, COSMIC, Hyprland, i3, Niri, or Cutefish)</li>
 <li>✓ Select gaming packages (Steam, Lutris, Heroic, etc.)</li>
-<li>✓ Configure bootloader</li>
+<li>✓ Configure bootloader (GRUB or rEFInd)</li>
 <li>✓ Auto GPU driver detection</li>
 </ul>
 </div>
@@ -290,7 +304,7 @@ sudo dd if=kickos-arch-*.iso of=/dev/sdX bs=4M status=progress</code></pre>
 KickOS
 </a>
 <div class="footer-links">
-<a href="#">GitHub</a>
+<a href="https://github.com/Speedyboy61/kickos">GitHub</a>
 <a href="#">Discord</a>
 <a href="#">Docs</a>
 </div>
@@ -300,7 +314,6 @@ KickOS
 </footer>
 
 <script>
-// CSS particle animation
 (function(){var p=document.getElementById('particles');for(var i=0;i<40;i++){var d=document.createElement('div');d.className='p';d.style.left=Math.random()*100+'%';d.style.animationDuration=(8+Math.random()*12)+'s';d.style.animationDelay=Math.random()*12+'s';d.style.width=(2+Math.random()*3)+'px';d.style.height=d.style.width;p.appendChild(d)}})();
 </script>
 

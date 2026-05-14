@@ -16,13 +16,14 @@
     {
       "type": "custom",
       "key": "OS",
-      "format": "KickOS Arch"
+      "format": "KickOS Arch (Arch Linux)"
     },
     "kernel",
     "packages",
     "shell",
     "de",
     "wm",
+    "wmtheme",
     "terminal",
     "terminalfont",
     "cpu",

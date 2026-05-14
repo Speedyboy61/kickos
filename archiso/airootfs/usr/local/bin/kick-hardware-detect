@@ -1,5 +1,4 @@
 #!/bin/bash
-# KickOS hardware detection — runs on first boot
 
 GPU="unknown"
 if lspci | grep -qi nvidia; then

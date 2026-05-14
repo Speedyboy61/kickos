@@ -1,13 +1,38 @@
 # KickOS
 
 ```
-██╗  ██╗██╗ ██████╗██╗  ██╗ ██████╗ ███████╗
-██║ ██╔╝██║██╔════╝██║ ██╔╝██╔═══██╗██╔════╝
-█████╔╝ ██║██║     █████╔╝ ██║   ██║███████╗
-██╔═██╗ ██║██║     ██╔═██╗ ██║   ██║╚════██║
-██║  ██╗██║╚██████╗██║  ██╗╚██████╔╝███████║
-╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
-      Linux for Gamers  •  kickos.dev
+++
+                                        *+++++++++++*
+                               #####*****+++++++++++                 +====--
+                                 #####*****++++++++        +++++++=========
+                                   ###*******+++++*      ++++++++++======
+                                   ###************     ++++++++++++====            ++++==
+                         **       %##************    *+++++++++++++++    ++             ====
+                                  ###************  #**+++++++++++++     #***++++++++++   ====
+                                  ##************  ***++++++++++++  %%%%%%%%%%%######+++  ===+
+                    *         +  ###******************+++++++++                  ###++   ==*
+                   ***           ##*******************++++++++                   ###+  *=+*
+                   ***          ###********************+++**                    %#*   ==**
+                    *       +   ###***********************                     ###  +=***
+                         =     ######*****************##                     %#%  #=***
+                      +    ##  ##%####*************### #                    #   +=***
+                        **#   %########**********%%% ##**                ##   =****
+                     ***  #   %%%########******%%% ####****            #   +=#***  +
+                   **# ##     %%############*%%% ######******       %   +=#####  +
+                ***# #*      %%%###########%%% %########*******      *=####*  *+
+               ++*  *#       %%##########%%%@ %#########*****     =+#####  #*
+             +*+* #*#       %%%########%%%@     %#######*     ++%#####          ******
+            +++*  ##        %%%######%%%%%        %#%     +++#####% #      *
+           + ++   ##       %%%#####%%%%%%@           ++++%%%%#  %####++
+          + +++   ####     %%%###%%%%%%@       +=+-+%%%%%%   #####****+++
+          +* ===    ######           #   ==++::=%%%%%%  %%####********++++*
+           *# =====   ======+=+=======-::=+#%%%%%        %*#***********+++++*
+            ***  ===-----=====-:.::#+######%      #       @%#**********++++++=
+               *******###*##########%     #**#              %%#######*******++++
+                      #%%%%%%%%%     #%
+                         %%%%      ##
+                        %
+        Linux for Gamers  •  kickos.dev
 ```
 
 **KickOS** is a gaming-focused Linux distribution available in Arch-based, Debian-based, and Handheld editions. Boot into a fully-featured gaming desktop with Wine, Proton-GE, GameMode, MangoHud, and the KickBoost FPS optimizer preinstalled.
@@ -20,6 +45,7 @@
 | Kernel | linux-zen | Liquorix | linux-zen |
 | Release model | Rolling | Stable | Rolling |
 | AUR | Yes | No (Flatpak) | Yes |
+| Desktop environments | KDE, Budgie, Cinnamon, COSMIC, Hyprland, i3, Niri, Cutefish | KDE, Budgie, Cinnamon, COSMIC, Hyprland, i3, Niri, Cutefish | KDE, Budgie, Cinnamon, COSMIC, Hyprland, i3, Niri, Cutefish |
 | Best for | Power users | Stability seekers | Handheld gaming PCs |
 | Badge | Recommended for gamers | Best for stability | For handheld devices |
 
@@ -44,7 +70,7 @@
 ### Build
 
 ```bash
-git clone https://github.com/kickos/kickos.git
+git clone https://github.com/Speedyboy61/kickos.git
 cd kickos
 
 # Build Arch ISO
@@ -97,7 +123,7 @@ kickos/
 - **KickUpdate** — GTK4 GUI for system updates
 - **Calamares installer** — Choose DE, gaming packages, and bootloader during install
 - **Welcome app** — First-boot setup wizard
-- **5 desktop environments**: KDE Plasma, Hyprland, i3, Niri, Cutefish
+- **8 desktop environments**: KDE Plasma, Budgie, Cinnamon, COSMIC, Hyprland, i3, Niri, Cutefish
 
 ## License
 

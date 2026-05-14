@@ -1,24 +1,89 @@
 Window.SetBackgroundTopColor (0.05, 0.05, 0.10);
 Window.SetBackgroundBottomColor (0.05, 0.05, 0.10);
 
-fun anim_callback ()
+global.my_logo = Image.Text ("K");
+global.my_logo.SetPosition (Window.GetWidth () / 2 - global.my_logo.GetWidth () / 2,
+                     Window.GetHeight () / 2 - global.my_logo.GetHeight () / 2);
+global.my_logo.SetColor (0.42, 0.36, 0.91);
+global.my_logo.SetOpacity (0.0);
+global.my_logo.SetZ (10);
+
+global.ring = Image.Elliptical (200, 200, 6);
+global.ring.SetPosition (Window.GetWidth () / 2 - 100,
+                  Window.GetHeight () / 2 - 100);
+global.ring.SetColor (0.66, 0.62, 0.97);
+global.ring.SetZ (5);
+global.ring.SetOpacity (0.0);
+
+global.progress = Image.Rectangle (Window.GetWidth () * 0.6, 4);
+global.progress.SetPosition (Window.GetWidth () * 0.2, Window.GetHeight () * 0.85);
+global.progress.SetColor (0.42, 0.36, 0.91);
+global.progress.SetZ (20);
+global.progress.SetOpacity (0.0);
+
+global.progress_bg = Image.Rectangle (Window.GetWidth () * 0.6, 4);
+global.progress_bg.SetPosition (Window.GetWidth () * 0.2, Window.GetHeight () * 0.85);
+global.progress_bg.SetColor (0.10, 0.10, 0.23);
+global.progress_bg.SetZ (19);
+global.progress_bg.SetOpacity (0.0);
+
+fun fade_in ()
 {
-    my_logo = Image.Text ("K");
-    my_logo.SetPosition (Window.GetWidth () / 2 - my_logo.GetWidth () / 2,
-                         Window.GetHeight () / 2 - my_logo.GetHeight () / 2);
-    my_logo.SetOpacity (1.0);
-    my_logo.SetZ (10);
+    global.my_logo.SetOpacity (global.my_logo.GetOpacity () + 0.05);
+    global.ring.SetOpacity (global.ring.GetOpacity () + 0.05);
+    global.progress_bg.SetOpacity (global.progress_bg.GetOpacity () + 0.05);
+    global.progress.SetOpacity (global.progress.GetOpacity () + 0.05);
 
-    ring = Image.Elliptical (200, 200, 8);
-    ring.SetPosition (Window.GetWidth () / 2 - 100,
-                      Window.GetHeight () / 2 - 100);
-    ring.SetZ (5);
-    ring.SetOpacity (0.8);
-
-    progress = Image.Rectangle (Window.GetWidth () * 0.2, 4);
-    progress.SetPosition (Window.GetWidth () * 0.4, Window.GetHeight () * 0.85);
-    progress.SetZ (20);
-    progress.SetOpacity (0.9);
+    if (global.my_logo.GetOpacity () < 1.0)
+    {
+        Plymouth.SetRefreshFunction (fade_in);
+    }
+    else
+    {
+        Plymouth.SetRefreshFunction (rotate_ring);
+    }
 }
 
-Plymouth.SetDisplayFunction (anim_callback);
+global.angle = 0.0;
+
+fun rotate_ring ()
+{
+    global.angle = global.angle + 0.02;
+    if (global.angle > 360.0)
+    {
+        global.angle = 0.0;
+    }
+    global.ring.SetRotation (global.angle, 200, 200);
+    global.progress.SetOpacity (0.9);
+    Plymouth.SetRefreshFunction (rotate_ring);
+}
+
+fun boot_progress (progress)
+{
+    global.progress.SetX (Window.GetWidth () * 0.2);
+    global.progress.SetWidth (Window.GetWidth () * 0.6 * progress);
+    if (progress >= 1.0)
+    {
+        global.my_logo.SetOpacity (1.0);
+    }
+}
+
+fun fade_out ()
+{
+    global.my_logo.SetOpacity (global.my_logo.GetOpacity () - 0.05);
+    global.ring.SetOpacity (global.ring.GetOpacity () - 0.05);
+    global.progress.SetOpacity (global.progress.GetOpacity () - 0.05);
+    global.progress_bg.SetOpacity (global.progress_bg.GetOpacity () - 0.05);
+
+    if (global.my_logo.GetOpacity () > 0.0)
+    {
+        Plymouth.SetRefreshFunction (fade_out);
+    }
+    else
+    {
+        Plymouth.SetRefreshFunction (null);
+    }
+}
+
+Plymouth.SetDisplayFunction (fade_in);
+Plymouth.SetUpdateFunction (boot_progress);

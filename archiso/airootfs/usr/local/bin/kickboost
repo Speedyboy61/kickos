@@ -1,7 +1,4 @@
 #!/bin/bash
-# KickOS KickBoost FPS Optimizer
-# Usage: kickboost [balanced|performance|turbo]
-
 MODE=${1:-balanced}
 
 set_governor() {
@@ -30,7 +27,7 @@ case $MODE in
         set_gpu_performance "auto" "0"
         systemctl stop gamemode 2>/dev/null
         echo "balanced" > /tmp/kickboost-mode
-        notify-send "KickBoost" "Mode: Balanced" --icon=kickos
+        notify-send "KickBoost" "Mode: Balanced — power saving" --icon=kickos
         ;;
     performance)
         set_governor "performance"
@@ -38,7 +35,7 @@ case $MODE in
         systemctl start gamemode 2>/dev/null
         clear_cache
         echo "performance" > /tmp/kickboost-mode
-        notify-send "KickBoost" "Mode: Performance" --icon=kickos
+        notify-send "KickBoost" "Mode: Performance — boosted" --icon=kickos
         ;;
     turbo)
         set_governor "performance"
@@ -48,7 +45,7 @@ case $MODE in
         sysctl -w kernel.sched_latency_ns=2000000 2>/dev/null
         sysctl -w vm.swappiness=5 2>/dev/null
         echo "turbo" > /tmp/kickboost-mode
-        notify-send "KickBoost" "Mode: TURBO" --icon=kickos
+        notify-send "KickBoost" "Mode: TURBO — maximum performance" --icon=kickos
         ;;
     *)
         echo "Usage: kickboost [balanced|performance|turbo]"

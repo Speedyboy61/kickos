@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# KickOS Desktop Environment selection module for Calamares
 
 import calamares
 
@@ -12,21 +11,39 @@ DESKTOPS = [
         "default": True,
     },
     {
+        "id": "budgie",
+        "name": "Budgie",
+        "desc": "Modern and feature-rich desktop. Clean design with a traditional layout.",
+        "tags": ["Beginner friendly", "GTK"],
+    },
+    {
+        "id": "cinnamon",
+        "name": "Cinnamon",
+        "desc": "Classic desktop layout with modern features. Familiar and easy to use.",
+        "tags": ["Beginner friendly", "GTK"],
+    },
+    {
+        "id": "cosmic",
+        "name": "COSMIC",
+        "desc": "Rust-based desktop environment. Modern, fast, and highly customizable.",
+        "tags": ["Modern", "Rust"],
+    },
+    {
         "id": "hyprland",
         "name": "Hyprland",
-        "desc": "Wayland compositor with smooth animations. Highly customizable, intermediate users.",
+        "desc": "Wayland compositor with smooth animations. Highly customizable.",
         "tags": ["Riceable"],
     },
     {
         "id": "i3",
         "name": "i3",
-        "desc": "Minimal tiling window manager. Keyboard-driven, very fast, steep learning curve.",
+        "desc": "Minimal tiling window manager. Keyboard-driven, very fast.",
         "tags": ["Lightweight"],
     },
     {
         "id": "niri",
         "name": "Niri",
-        "desc": "Experimental scrollable Wayland WM. Unique column layout, early adopters only.",
+        "desc": "Experimental scrollable Wayland WM. Unique column layout.",
         "tags": ["Experimental"],
     },
     {
