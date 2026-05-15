@@ -70,8 +70,10 @@ gamemode
 lib32-gamemode
 mangohud
 lib32-mangohud
-vulkan-icd-loader
-lib32-vulkan-icd-loader
+vulkan-radeon
+lib32-vulkan-radeon
+vulkan-intel
+lib32-vulkan-intel
 vulkan-tools
 mesa
 lib32-mesa
